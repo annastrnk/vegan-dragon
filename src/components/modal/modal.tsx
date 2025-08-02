@@ -1,6 +1,6 @@
 
 import type { ReactNode } from 'react';
-import classes from './Modal.module.css';
+import classes from './modal.module.css';
 
 type Props = {
     title: string;
