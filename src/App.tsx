@@ -8,19 +8,18 @@ import GameControlls from "./components/gameControls/gameControls";
 import GridContoller from "./components/grid/gridController";
 import { DirectionButtons } from "./components/directionButtons/directionButtons";
 
-
 function App() {
   return (
     <>
       <div className={classes.root}>
         <SettingContextProvider>
-          <SettingsToolbar/>
+          <SettingsToolbar />
           <div className={classes.gridContainer}>
             <GameContextProvider>
-              <GameController />        
-               <GameControlls />
-              <GridContoller/>
-     <DirectionButtons/>
+              <GameController />
+              <GameControlls />
+              <GridContoller />
+              <DirectionButtons />
             </GameContextProvider>
           </div>
         </SettingContextProvider>

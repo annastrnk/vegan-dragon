@@ -16,7 +16,7 @@ export function Modal({ title, message, buttons }: Props) {
                 <div className={classes.message}>{message}</div>
                 <div className={classes.buttons}>
                     {Object.entries(buttons).map(([key, value]) => (
-                        <button key={key} onClick={value}>{key}</button>
+                        <button className={classes.btn}  key={key} onClick={value}>{key}</button>
                     ))}
                 </div>
             </div>

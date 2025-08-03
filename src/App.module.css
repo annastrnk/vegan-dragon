@@ -1,13 +1,21 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
+  /* margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  text-align: center; */
+
 }
 
 .root {
   width: 100%;
   height: 100%;
+  padding: 10px 0;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
+  background-image: url(../public/360_F_236878093_4y509xVwXrUgMIYYvw1RZXVXWY9VDxe8.jpg);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
 }

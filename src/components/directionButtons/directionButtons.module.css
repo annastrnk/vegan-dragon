@@ -1,37 +1,86 @@
 .gamepad {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    display: none;
-  }
-  
-  .middleRow {
-    display: flex;
-    gap: 50px;
-  }
-  
-  .contolBtn {
-    width: 60px;
-    height: 60px;
-    border-radius: 20%;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    background-color: #5f695f; 
-    color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.1s ease;
-  }
-  
-  .control-btn:active {
-    transform: scale(0.9);
-  }
-  
-@media (max-width: 768px) {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
 
-    .gamepad {
-      display: flex;
-    }
+.middleRow {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.contolBtn {
+  padding: 5px 15px;
+  border-radius: 20%;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(145deg, #ecf0f6, #b6bbbe);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.contolBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.contolBtn:active {
+  transform: scale(0.95) translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .gamepad {
+    display: flex;
+    margin-top: 5px;
+    padding: 8px;
+    gap: 6px;
   }
+
+  .middleRow {
+    gap: 40px;
+  }
+
+  .contolBtn {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gamepad {
+    padding: 6px;
+    gap: 4px;
+  }
+
+  .middleRow {
+    gap: 30px;
+  }
+
+  .contolBtn {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  .gamepad {
+    padding: 4px;
+    gap: 3px;
+  }
+
+  .contolBtn {
+    font-size: 16px;
+  }
+}

@@ -35,10 +35,8 @@ export default function GameControlls() {
     <div className={classes.root}>
       <div className={classes.score}>
         {gameStatus !== GameStatus.IDLE && (
-          <>
             <Score value={points} delay={100} step={15} />
-            <br />
-          </>
+     
         )}
         <div className={classes.wrapperBtns}>
           {gameStatus === GameStatus.IDLE && (
