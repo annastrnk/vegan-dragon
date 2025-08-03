@@ -1,4 +1,5 @@
-import { useSettingsConext } from "../context/settingsContext";
+import { useSettingsConext } from "../../context/settingsContext";
+import classes from './settingsToolbar.module.css'
 
 export default function SettingsToolbar() {
   const { setuserAlternativeGrid, moveDelay, changeMoveDelay } =
@@ -9,9 +10,9 @@ export default function SettingsToolbar() {
     setuserAlternativeGrid((value) => !value);
   };
   return (
-    <div>
-      <button onClick={switchGrid}>Switch grid</button>
-      <button onClick={changeMoveDelay}>
+    <div className={classes.wpapper}>
+      <button className={classes.btn} onClick={switchGrid}>Switch grid</button>
+      <button className={classes.btn} onClick={changeMoveDelay}>
         {`Move delay: ${moveDelaySecond}s`}
       </button>
     </div>

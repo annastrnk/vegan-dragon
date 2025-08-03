@@ -33,4 +33,6 @@ export function useHandleDirectiom(){
                 break;
         }
     })
+
+    return {setDirection}
 }

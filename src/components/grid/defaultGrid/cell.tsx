@@ -7,16 +7,16 @@ function getStyle(
   isSnake: boolean
 ): CSSProperties {
   return {
-    width: 40,
-    height: 40,
+    width: 30,
+    height: 30,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     fontSize: "2em",
     gridRow,
     gridColumn,
-    backgroundColor: isSnake ? "#2B27" : "#FFF",
-    border: `1px solid ${isSnake ? "#2B2" : "#DDD"}`,
+    backgroundColor: isSnake ? "#A81417" : "#329b2a",
+    border: `1px solid ${isSnake ? "#A81417;" : "#228B22"}`,
   };
 }
 type Props = {

@@ -1,8 +1,6 @@
 import { generateRandomInt } from "../utils/generateRandomInt";
 import { VEGETABLES } from "../constants";
 import type { GameContextState, Vegetable } from "../types";
-// import { generateRandomInt } from "../utils/generateRandomInt";
-// import { getRandomArrayElement } from "../utils/getRandomArrayElement";
 import { buildGrid } from "./gridUtils";
 import { getRandomArrayElement } from "../utils/getRandomArrayElement";
 

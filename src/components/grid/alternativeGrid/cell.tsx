@@ -2,7 +2,7 @@ import { memo, type CSSProperties } from "react";
 import { CellType } from "../../../types";
 
 enum BgColor {
-  NONE = "inherit",
+  NONE = "#D3D3D3",
   SNAKE = "#2B27",
   VEGETABLE = "#FF8",
 }
@@ -19,7 +19,6 @@ function getStyle(content: string): CSSProperties {
     width: "30px",
     height: "30px",
     backgroundColor,
-    border:'1px solid red'
   };
 }
 

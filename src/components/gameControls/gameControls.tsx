@@ -5,13 +5,12 @@ import { ActionType, GameStatus } from "../../types";
 import { useLocalStorage } from "../../hooks/useLocalSrorage";
 import { GameOverModal } from "./gameOverModal";
 import { Score } from "./score";
-import { CurrentDirection } from "./currentDirection";
 
 import classes from "./gameContols.module.css";
 
 export default function GameControlls() {
   const [state, dispatch] = useGameContext();
-  const { gameStatus, points, direction } = state;
+  const { gameStatus, points } = state;
   const [highScore, setHihgScore] = useLocalStorage<number>(HIGH_SCORE_KEY, 0);
   const [prevHighScore, setPrevHighScore] = useState<number>(highScore);
 
@@ -39,22 +38,21 @@ export default function GameControlls() {
           <>
             <Score value={points} delay={100} step={15} />
             <br />
-            <CurrentDirection direction={direction} />
           </>
         )}
-        <div className={classes.buttons}>
+        <div className={classes.wrapperBtns}>
           {gameStatus === GameStatus.IDLE && (
-            <button onClick={() => dispatch({ type: ActionType.PLAY })}>
+            <button className={classes.buttons} onClick={() => dispatch({ type: ActionType.PLAY })}>
               Start
             </button>
           )}
           {gameStatus === GameStatus.PLAYING && (
-            <button onClick={() => dispatch({ type: ActionType.PAUSE })}>
+            <button className={classes.buttonsPause} onClick={() => dispatch({ type: ActionType.PAUSE })}>
               Pause
             </button>
           )}
           {gameStatus === GameStatus.PAUSED && (
-            <button onClick={() => dispatch({ type: ActionType.PLAY })}>
+            <button className={classes.buttons} onClick={() => dispatch({ type: ActionType.PLAY })}>
               Resume
             </button>
           )}
