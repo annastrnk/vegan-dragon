@@ -15,7 +15,8 @@
 }
 
 .contolBtn {
-  padding: 5px 15px;
+  font-size: 20px;
+  padding: 10px 25px;
   border-radius: 20%;
   border: none;
   cursor: pointer;
@@ -46,41 +47,9 @@
 @media (max-width: 768px) {
   .gamepad {
     display: flex;
-    margin-top: 5px;
-    padding: 8px;
-    gap: 6px;
-  }
-
-  .middleRow {
-    gap: 40px;
   }
 
   .contolBtn {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .gamepad {
-    padding: 6px;
-    gap: 4px;
-  }
-
-  .middleRow {
-    gap: 30px;
-  }
-
-  .contolBtn {
-    font-size: 18px;
-  }
-}
-@media (max-width: 768px) and (orientation: landscape) {
-  .gamepad {
-    padding: 4px;
-    gap: 3px;
-  }
-
-  .contolBtn {
-    font-size: 16px;
+   
   }
 }
